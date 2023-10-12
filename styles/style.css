@@ -1,0 +1,250 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor : #232e35;
+    --secondaryColor : #656d72;
+    --navyColor: #000080;
+    --lineColor:#005BFB;
+
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--primaryColor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, span , label,input , textarea,li {
+    color: var(--secondaryColor);
+}
+a {
+    text-decoration: none; 
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container {
+        width: 90%;
+
+    }
+}
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin:  0;
+    transition: all 0.3s;
+    z-index: 99;
+}
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+.sectionTittle {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+.preTittle {
+    text-transform: uppercase ;
+    letter-spacing: .5rem;
+    color: var(--secondaryColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.preTittle::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--navyColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+/* layout */
+.grid-3 { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3;
+}
+/* logo and navigasi */
+.nav {
+    display:flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--navyColor)
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryColor);
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border: 1.5px solid var(--secondaryColor);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.04)0px 3px 5px;
+}
+
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+.heroright img{
+    width: 90%;
+}
+
+.heroright{
+    display: flex;
+    justify-content: center;
+}
+
+#services {
+    background-color: #E1E1E1;
+    padding: 6rem 0;
+}
+.services .preTittle {
+    margin: 0 auto;
+    text-align: center;
+}
+.servicesTittle {
+    text-align: center;
+}
+
+/* SKILLs dan education */
+
+#Skills {
+    padding: var(--secondaryColor);
+    background: white;
+}
+
+.Skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 3rem; 
+}
+
+.education {
+    display: flex;
+    gap: 2rem;
+}
+
+.education .line{
+    padding: 0 0.7rem;
+}
+
+.education .line div{
+    width: 2px;
+    height: 100%;
+    background-color: var(--secondaryColor);
+    position: relative;
+}
+
+.education-info p {
+    margin: .6rem 0 1.4rem;
+
+}
+.education-years {
+    margin-bottom: 2.5rem;
+}
+
+/* titik bulet di line education dan skills*/
+
+.education .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--secondaryColor);
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+/* CONTACT */
+.contact .preTittle {
+    padding: 3%;
+}
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: var(white);
+    border: 1px solid var(--secondaryColor);
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: #656d72;
+}
+
+.button-submit{
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: var(--primaryColor);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.button-submit:hover {
+    background: var(--secondaryColor);
+}
